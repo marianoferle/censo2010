@@ -214,13 +214,17 @@ if(mouseX > width-151-10 && mouseX <  width-151+10 && mouseY > height-87-10 && m
 } 
 
 
- for (int i=0; i < coor.length-6; i++) {
+//----------------------------------------------------------
+
+
+ for (int i=0; i < coor.length; i++) {
           
       int[] valor =split(coor[i], ",");
+      vv3 = new int[coor.length][valor.length]; 
        
                 for (int u = 0; u < valor.length; u++) {
               
-                     vv3 = new int[coor.length][valor.length]; 
+                     
                          
                                vv3[i][u]=valor[u];  
   
