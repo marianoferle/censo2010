@@ -22,12 +22,8 @@ void setup() {
   size(1000,600);
   background(360);
   smooth();
-  colorMode(RGB, 360, 100, 100); 
+  colorMode(HSB, 360, 100, 100); 
   frameRate(10);
-  
-  
-
-
  mapa = loadImage("processing/data/mapa_argentina.png");
   ba = loadImage("processing/data/ba.png");
   cf = loadImage("processing/data/cf.png");
@@ -54,69 +50,24 @@ void setup() {
   snc = loadImage("processing/data/snc.png");
   st = loadImage("processing/data/st.png");
   tf = loadImage("processing/data/tf.png");
-  tuc = loadImage("processing/data/tuc.png");
-  
+  tuc = loadImage("processing/data/tuc.png");  
   compu = loadImage("processing/data/compu.png");
-  hist = loadImage("processing/data/hist.png");
-
-  
+  hist = loadImage("processing/data/hist.png");  
   coor = loadStrings("query.php?tipo=load3");
   coords = loadStrings("query.php?tipo=load");
   pobla = loadStrings("query.php?tipo=load2");
- 
-/*
-  mapa = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/mapa_argentina.png");
-  ba = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ba.png");
-  cf = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/cf.png");
-  an = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/an.png");
-  cat = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/cat.png");
-  ch = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ch.png");
-  chb = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/chb.png");
-  cor = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/cor.png");
-  corr = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/corr.png");
-  ent = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ent.png");
-  fm = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/fm.png");
-  im = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/im.png");
-  jj = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/jj.png");
-  lar = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/lar.png");
-  lp = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/lp.png");
-  md = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/md.png");
-  ms = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ms.png");
-  neq = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/neq.png");
-  rn = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/rn.png");
-  sane = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sane.png");
-  sf = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sf.png");
-  sj = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sj.png");
-  sl = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sl.png");
-  snc = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/snc.png");
-  st = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/st.png");
-  tf = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/tf.png");
-  tuc = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/tuc.png");
-  
-  compu = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/compu.png");
-  hist = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/hist.png");
-  
-// coor = loadStrings("https://mf007.000webhostapp.com/sitios/censo/query.php?tipo=load3");
- //coords = loadStrings("https://mf007.000webhostapp.com/sitios/censo/query.php?tipo=load");
-// pobla = loadStrings("https://mf007.000webhostapp.com/sitios/censo/query.php?tipo=load2");
-
-*/
 
 cargarDatos();
 }
 
 void draw() { 
 noLoop();
-//cargarDatos();
 }
 
 void mouseMoved(){
    cargarDatos();
 }
 
-
-
-   //---------------------------------------------------------------------------------
 void cargarDatos() {
 background(360);
   
@@ -128,32 +79,32 @@ image(hist, width-40,height-30);
 stroke(0);
 strokeWeight(1);
 fill(0,200);
-ellipse(width-210,height-535,bb,bb);      //jujuy
-ellipse(width-190,height-520,bb,bb);      //salta
-ellipse(width-120,height-505,bb,bb);      //formosa
-ellipse(width-150,height-490,bb,bb);      //chaco
-ellipse(width-50,height-480,bb,bb);       //misiones
-ellipse(width-110,height-450,bb,bb);     //corrientes
-ellipse(width-150,height-430,bb,bb);   //santa fe
-ellipse(width-130,height-400,bb,bb);   //entre rios
-ellipse(width-185,height-470,bb,bb);   //santiago del estero
-ellipse(width-215,height-485,bb,bb);   //tucuman
-ellipse(width-245,height-480,bb,bb);   //catamarca
-ellipse(width-240,height-440,bb,bb);   //la rioja
-ellipse(width-195,height-410,bb,bb);   //cordoba
-ellipse(width-225,height-380,bb,bb);   //san luis
-ellipse(width-260,height-415,bb,bb);   //san juan
-ellipse(width-260,height-370,bb,bb);   //mendoza
-ellipse(width-210,height-320,bb,bb);   //la pampa
-ellipse(width-265,height-290,bb,bb);   //neuquen
-ellipse(width-240,height-265,bb,bb);   //rio negro
-ellipse(width-124,height-355,bb,bb);   //capital federal
-ellipse(width-147,height-324,bb,bb);   //buenos aires
-ellipse(width-151,height-87,bb,bb);   //islas malvinas
-ellipse(width-225,height-210,bb,bb);   //chubut
-ellipse(width-265,height-80,bb,bb);   //santa cruz
-ellipse(width-240,height-50,bb,bb);   //tierra del fuego
-ellipse(width-67,height-27,bb,bb);   //antartida
+ellipse(width-210,height-535,bb,bb);      
+ellipse(width-190,height-520,bb,bb);     
+ellipse(width-120,height-505,bb,bb);      
+ellipse(width-150,height-490,bb,bb);      
+ellipse(width-50,height-480,bb,bb);      
+ellipse(width-110,height-450,bb,bb);     
+ellipse(width-150,height-430,bb,bb);  
+ellipse(width-130,height-400,bb,bb);  
+ellipse(width-185,height-470,bb,bb);  
+ellipse(width-215,height-485,bb,bb); 
+ellipse(width-245,height-480,bb,bb);   
+ellipse(width-240,height-440,bb,bb);  
+ellipse(width-195,height-410,bb,bb);  
+ellipse(width-225,height-380,bb,bb);  
+ellipse(width-260,height-415,bb,bb); 
+ellipse(width-260,height-370,bb,bb);  
+ellipse(width-210,height-320,bb,bb); 
+ellipse(width-265,height-290,bb,bb);  
+ellipse(width-240,height-265,bb,bb);   
+ellipse(width-124,height-355,bb,bb);   
+ellipse(width-147,height-324,bb,bb);
+ellipse(width-151,height-87,bb,bb);  
+ellipse(width-225,height-210,bb,bb);  
+ellipse(width-265,height-80,bb,bb);   
+ellipse(width-240,height-50,bb,bb);   
+ellipse(width-67,height-27,bb,bb);   
 
  if(mouseX > width-124-10 && mouseX <  width-124+10 && mouseY > height-355-10 && mouseY < height-355+10){
  image(cf, width-132,height-363);
@@ -235,7 +186,7 @@ ellipse(width-67,height-27,bb,bb);   //antartida
  image(an, width-107,height-103);
  }
  
-   textFont("Georgia", 10);
+   textFont("Georgia",10);
    textMode(CENTER);
 
    fill(0);
@@ -263,10 +214,6 @@ if(mouseX > width-151-10 && mouseX <  width-151+10 && mouseY > height-87-10 && m
 } 
 
 
-   
-//----------------------------------------------------------------------------
- 
- //coor - vv3
  for (int i=0; i < coor.length-6; i++) {
           
       int[] valor =split(coor[i], ",");
@@ -349,14 +296,10 @@ ellipse(xcomp-7,ycomp+38,5,5);
 fill(320,100,100,250);
 ellipse(xcomp-7,ycomp+58,5,5);
 
-}  //mouseX y mouseY compu
+} 
   
-}  //u vv3       
-} //i vv3
-
-//--------------------------------------------------------------------------------------------------------------   
-   
-//coords - vv
+}  
+}
 
        for (int i=1; i < coords.length-1; i++) {
           
@@ -379,7 +322,7 @@ ellipse(xcomp-7,ycomp+58,5,5);
   if(vv[i][1]==vv[i][u]){
     noStroke();
     fill(40,100,100,80);
-    rect(xx*i,height-5,5,-vv[i][1]/2500);    //poblacion 
+    rect(xx*i,height-5,5,-vv[i][1]/2500);  
     stroke(40,100,100,200);
     strokeWeight(5);    
     point(2+xx*i,height-5-vv[i][1]/2500);
@@ -388,13 +331,13 @@ ellipse(xcomp-7,ycomp+58,5,5);
  if(vv[i][2]==vv[i][u]){ 
     stroke(250,100,100,200);
     strokeWeight(5);    
-    point(3+xx*i,height-5-vv[i][2]/2500);     //varones
+    point(3+xx*i,height-5-vv[i][2]/2500);    
    }
    
  if(vv[i][3]==vv[i][u]){ 
     stroke(350,100,100,200);
     strokeWeight(5);    
-    point(3+xx*i,height-5-vv[i][3]/2500);      //mujeres
+    point(3+xx*i,height-5-vv[i][3]/2500);     
   }
 
  textSize(10);
@@ -429,15 +372,11 @@ ellipse(xcomp-7,ycomp+58,5,5);
     point(18,height-25);  
     }
 
-  } //mouseX y mouseY ------
+  } 
   
-} //for u -----
-} //for i -----
+} 
+} 
  
-//--------------------------------------------------------------------------------------------------------------
- 
-//pobla - vv2
-
      for (int i=1; i < pobla.length-1; i++) {
           
        int[] prob = split(pobla[i], ",");
@@ -464,63 +403,61 @@ int rncob=vv2[i][8]/raid;
 int rhmas=vv2[i][9]/raid;
 
 
-int xsup=width/2+160;      //sup superficie
+int xsup=width/2+160;     
 int ysup=20+20*i;  
 
-int xprob=40;        //provincia y hab/km2
+int xprob=40;       
 int yprob=50; 
 
-int xhab=width/2;        //sup habitantes  -------------------
+int xhab=width/2;       
 int yhab=height/2;
 
-int xalf=100;       //sup alfabetos
+int xalf=100;       
 int yalf=190;
 
-int xviv=250;     //sup viviendas 
+int xviv=250;    
 int yviv=70;
 
-int xcob=370; //cobertura
+int xcob=370;
 int ycob=95;  
   
-int xhmas=width/2-210;        //sup habitantes 
+int xhmas=width/2-210;      
 int yhmas=height/2-40;
 
 int alph=20;
-
-
 
   smooth();
    fill(rhab,rhab,rhab,alph);
    strokeWeight(1);
    stroke(0,alph);
-   ellipse(xhab,yhab,rhab,rhab);   //habitantes
+   ellipse(xhab,yhab,rhab,rhab);  
    
    smooth();
    fill(rhmas,rhmas,rhmas,alph);
    strokeWeight(1);
    stroke(0,alph);
-   ellipse(xhmas,yhmas,rhmas,rhmas);   //habitantes 10 años y mas   
+   ellipse(xhmas,yhmas,rhmas,rhmas);  
 
    
-   fill(rsup,rsup,rsup,alph+20);        //superficie
+   fill(rsup,rsup,rsup,alph+20);       
    stroke(0,alph);
    ellipse(xsup,ysup,rsup,rsup);  
    
    stroke(0,alph);
    fill(ralf,ralf,ralf,alph);
-   ellipse(xalf,yalf,ralf,ralf);     //alfabetos
+   ellipse(xalf,yalf,ralf,ralf);     
    fill(ranal,ranal,ranal,alph);
-   ellipse(xalf-40,yalf-40,ranal,ranal);    //analfabetos 
+   ellipse(xalf-40,yalf-40,ranal,ranal);    
    
    fill(rviv,rviv,rviv,alph);
    stroke(0,alph);
-   ellipse(xviv,yviv,rviv,rviv);        //viviendas
+   ellipse(xviv,yviv,rviv,rviv);       
    
    stroke(0,10);
    fill(rcob,rcob,rcob,10);
-   ellipse(xcob,ycob,rcob,rcob);     //cobertura
+   ellipse(xcob,ycob,rcob,rcob);   
    fill(rncob,rncob,rncob,10);
-   ellipse(xcob+150,ycob,rncob,rncob);    // no cobertura
+   ellipse(xcob+150,ycob,rncob,rncob);    
 
 
    textSize(12);
@@ -530,39 +467,39 @@ int alph=20;
    fill(rhab,rhab,rhab,150);
    strokeWeight(1);
    stroke(0,300);
-   ellipse(xhab,yhab,rhab,rhab);    //habitantes ------------------------------------------------------
+   ellipse(xhab,yhab,rhab,rhab);   
    
    smooth();
    fill(rhmas,rhmas,rhmas,150);
    strokeWeight(1);
    stroke(0,300);
-   ellipse(xhmas,yhmas,rhmas,rhmas);   //habitantes 10 años y mas  
+   ellipse(xhmas,yhmas,rhmas,rhmas);   
   
    fill(rsup,rsup,rsup,100);
    stroke(0,200);
    ellipse(xsup,ysup,2,2);
-   ellipse(xsup,ysup,rsup,rsup);        //superficie
+   ellipse(xsup,ysup,rsup,rsup);     
    
    stroke(0,300);
    fill(ralf,ralf,ralf,100);
-   ellipse(xalf,yalf,ralf,ralf);     //alfabetos
+   ellipse(xalf,yalf,ralf,ralf);     
    fill(ranal,ranal,ranal,100);
-   ellipse(xalf-40,yalf-40,ranal,ranal);    //analfabetos 
+   ellipse(xalf-40,yalf-40,ranal,ranal);   
    
    fill(rviv,rviv,rviv,100);
    stroke(0,200);
-   ellipse(xviv,yviv,rviv,rviv);           //viviendas
+   ellipse(xviv,yviv,rviv,rviv);        
    
    stroke(0,200);
    fill(rcob,rcob,rcob,100);
-   ellipse(xcob,ycob,rcob,rcob);     //cobertura
+   ellipse(xcob,ycob,rcob,rcob);    
    fill(rncob,rncob,rncob,100);
-   ellipse(xcob+150,ycob,rncob,rncob);    // no cobertura
+   ellipse(xcob+150,ycob,rncob,rncob);  
  
    fill(0);
    textSize(11);  
   
-   if(vv2[i][0]!=0){                        //provincia y hab/km2
+   if(vv2[i][0]!=0){                       
    text(vv2[i][0],xprob+70,yprob-30);
    }
    if(vv2[i][3]!=0){
@@ -570,41 +507,39 @@ int alph=20;
    }
    
    if(vv2[i][9]!=0){
-   text(vv2[i][9],xhmas+20,yhmas+30);   //habitantes 10 años y mas
+   text(vv2[i][9],xhmas+20,yhmas+30); 
    }
    
-   if(vv2[i][4]==vv2[i][u]){                                   //alfabeto 
+   if(vv2[i][4]==vv2[i][u]){                                
    text(vv2[i][4],xalf+80,yalf-5); 
    }
    
-   if(vv2[i][5]==vv2[i][u]){                                   //analfabeto
+   if(vv2[i][5]==vv2[i][u]){                                  
    text(vv2[i][5],xalf+40,yalf-40); 
    }
    
-   if(vv2[i][6]==vv2[i][u]){                                   //viviendas
+   if(vv2[i][6]==vv2[i][u]){                                  
    text(vv2[i][6],xviv+10,yviv+20); 
    }
    
-   if(vv2[i][7]==vv2[i][u]){                                   //cobertura
+   if(vv2[i][7]==vv2[i][u]){                                   
    text(vv2[i][7],xcob+40,ycob+30); 
    }
-      if(vv2[i][8]==vv2[i][u]){                                   //nocobertura
+      if(vv2[i][8]==vv2[i][u]){                                 
    text(vv2[i][8],xcob+150,ycob-30); 
    }
-
-
    
    if(vv2[i][u]==vv2[i][0]){
    strokeWeight(0.4);   
-   line(xsup,ysup,width-xy[i][0],height-xy[i][1]);                       //de provincia a superficie
-   line(xprob,yprob,xhab,yhab);                       //de todos a habitantes
-   line(xhab,yhab,xsup,ysup);                   //de habitantes a superficie
-   line(xhab,yhab,xhmas,yhmas);                   // de habitantes a habitantes 10 años y mas
-   line(xhmas,yhmas,xalf,yalf);                   // de habitantes 10 años y mas a alfabetos
-   line(xalf-40,yalf-40,xalf,yalf);            // de alfabetos a analfabetos
-   line(xprob,yprob,xviv,yviv);                  //de habitantes a viviendas
-   line(xhab,yhab,xcob,ycob);                  //de habitantes a cobertura
-   line(xcob,ycob,xcob+150,ycob);                  //de cobertura a nocobertura
+   line(xsup,ysup,width-xy[i][0],height-xy[i][1]);                     
+   line(xprob,yprob,xhab,yhab);                     
+   line(xhab,yhab,xsup,ysup);                  
+   line(xhab,yhab,xhmas,yhmas);               
+   line(xhmas,yhmas,xalf,yalf);                
+   line(xalf-40,yalf-40,xalf,yalf);         
+   line(xprob,yprob,xviv,yviv);                 
+   line(xhab,yhab,xcob,ycob);                 
+   line(xcob,ycob,xcob+150,ycob);                  
    strokeWeight(5);   
    point(xhab,yhab);
    point(width-xy[i][0],height-xy[i][1]);
@@ -645,50 +580,49 @@ int alph=20;
    }
 
 
-   } //if != 0 ------
-   } //mouseX y mouseY -------
+   }
+   } 
   
-     //-------------------------------
-  
+
  if(mouseX > width-67-10 && mouseX <  width-67+10 && mouseY > height-27-10 && mouseY < height-27+10){                           //antartida
   if(vv2[24][u]!=0){
    
    fill(rhab,rhab,rhab,150);
    strokeWeight(1);
    stroke(0,300);
-   ellipse(xhab,yhab,rhab,rhab);           //habitantes
+   ellipse(xhab,yhab,rhab,rhab);         
    
    smooth();
    fill(rhmas,rhmas,rhmas,150);
    strokeWeight(1);
    stroke(0,300);
-   ellipse(xhmas,yhmas,rhmas,rhmas);   //habitantes 10 años y mas  
+   ellipse(xhmas,yhmas,rhmas,rhmas);   
   
    fill(rsup,rsup,rsup,100);
    stroke(0,200);
    ellipse(xsup,ysup,2,2);
-   ellipse(xsup,ysup,rsup,rsup);        //superficie
+   ellipse(xsup,ysup,rsup,rsup);      
    
    stroke(0,300);
    fill(ralf,ralf,ralf,100);
-   ellipse(xalf,yalf,ralf,ralf);     //alfabetos
+   ellipse(xalf,yalf,ralf,ralf);     
    fill(ranal,ranal,ranal,100);
-   ellipse(xalf-40,yalf-40,ranal,ranal);    //analfabetos 
+   ellipse(xalf-40,yalf-40,ranal,ranal);    
    
    fill(rviv,rviv,rviv,100);
    stroke(0,200);
-   ellipse(xviv,yviv,rviv,rviv);           //viviendas
+   ellipse(xviv,yviv,rviv,rviv);         
    
    stroke(0,200);
    fill(rcob,rcob,rcob,100);
-   ellipse(xcob,ycob,rcob,rcob);     //cobertura
+   ellipse(xcob,ycob,rcob,rcob);    
    fill(rncob,rncob,rncob,100);
-   ellipse(xcob+150,ycob,rncob,rncob);    // no cobertura
+   ellipse(xcob+150,ycob,rncob,rncob);
  
    fill(0);
    textSize(11);  
   
-   if(vv2[i][0]!=0){                        //provincia y hab/km2
+   if(vv2[i][0]!=0){                       
    text(vv2[i][0],xprob+70,yprob-30);
    }
    if(vv2[i][3]!=0){
@@ -696,25 +630,25 @@ int alph=20;
    }
    
    if(vv2[i][9]!=0){
-   text(vv2[i][9],xhmas+20,yhmas+30);   //habitantes 10 años y mas
+   text(vv2[i][9],xhmas+20,yhmas+30);  
    }
    
-   if(vv2[i][4]==vv2[i][u]){                                   //alfabeto 
+   if(vv2[i][4]==vv2[i][u]){                                  
    text(vv2[i][4],xalf+80,yalf-5); 
    }
    
-   if(vv2[i][5]==vv2[i][u]){                                   //analfabeto
+   if(vv2[i][5]==vv2[i][u]){                                   
    text(vv2[i][5],xalf+40,yalf-40); 
    }
    
-   if(vv2[i][6]==vv2[i][u]){                                   //viviendas
+   if(vv2[i][6]==vv2[i][u]){                                 
    text(vv2[i][6],xviv+10,yviv+20); 
    }
    
-   if(vv2[i][7]==vv2[i][u]){                                   //cobertura
+   if(vv2[i][7]==vv2[i][u]){                                  
    text(vv2[i][7],xcob+40,ycob+30); 
    }
-   if(vv2[i][8]==vv2[i][u]){                                   //nocobertura
+   if(vv2[i][8]==vv2[i][u]){                                 
    text(vv2[i][8],xcob+150,ycob-30); 
    }
 
@@ -722,15 +656,15 @@ int alph=20;
    
    if(vv2[i][u]==vv2[i][0]){
    strokeWeight(0.4);   
-   line(xsup,ysup,width-67,height-27);                       //de provincia a superficie
-   line(xprob,yprob,xhab,yhab);                       //de todos a habitantes
-   line(xhab,yhab,xsup,ysup);                   //de habitantes a superficie
-   line(xhab,yhab,xhmas,yhmas);                   // de habitantes a habitantes 10 años y mas
-   line(xhmas,yhmas,xalf,yalf);                   // de habitantes 10 años y mas a alfabetos
-   line(xalf-40,yalf-40,xalf,yalf);            // de alfabetos a analfabetos
-   line(xprob,yprob,xviv,yviv);                  //de habitantes a viviendas
-   line(xhab,yhab,xcob,ycob);                  //de habitantes a cobertura
-   line(xcob,ycob,xcob+150,ycob);                  //de cobertura a nocobertura
+   line(xsup,ysup,width-67,height-27);                       
+   line(xprob,yprob,xhab,yhab);                      
+   line(xhab,yhab,xsup,ysup);                   
+   line(xhab,yhab,xhmas,yhmas);                 
+   line(xhmas,yhmas,xalf,yalf);                
+   line(xalf-40,yalf-40,xalf,yalf);          
+   line(xprob,yprob,xviv,yviv);               
+   line(xhab,yhab,xcob,ycob);                 
+   line(xcob,ycob,xcob+150,ycob);                
    strokeWeight(5);   
    point(xhab,yhab);
    point(width-67,height-27);
@@ -761,27 +695,12 @@ int alph=20;
    text("Percibe Jubilaciòn:",xcob-60,ycob+30);           
    text("No Percibe Jubilaciòn:",xcob+40,ycob-30);
    }
-   if(vv2[i][1]!=0){
-   text("Habitantes: "+vv2[i][1],xhab,yhab+30);  
-   }
-   if(vv2[i][2]!=0){
-   text("Superficie: "+vv2[i][2]+" km2",xsup-60,ysup+30);
-   }
-   } //if != 0 ---------
-   } // mouse X y mouseY------
+   if(vv2[i][1]!=0){text("Habitantes: "+vv2[i][1],xhab,yhab+30);}
+   if(vv2[i][2]!=0){text("Superficie: "+vv2[i][2]+" km2",xsup-60,ysup+30);}
+ }} 
   
 
- } // for u -------
- } // for i ------ 
- 
- 
-
-}//cargarDatos
-
-
-
- 
- 
+ }}} 
  
 
 
