@@ -7,4 +7,4 @@
 </html>
 <?php
 echo "<div id='conex'>";
-if (isset($db_conexion)) {mysql_close($db_conexion);}echo "</div>";?>
+if (isset($db_conexion)) {mysqli_close($db_conexion);}echo "</div>";?>

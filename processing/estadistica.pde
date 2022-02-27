@@ -22,7 +22,7 @@ void setup() {
   size(1000,600);
   background(360);
   smooth();
-  colorMode(HSB, 360, 100, 100); 
+  colorMode(RGB, 360, 100, 100); 
   frameRate(10);
   
   
@@ -65,40 +65,40 @@ void setup() {
   pobla = loadStrings("query.php?tipo=load2");
  
 /*
-  mapa = loadImage("http://marianoferle.net76.net/processing/data/mapa_argentina.png");
-  ba = loadImage("http://marianoferle.net76.net/processing/data/ba.png");
-  cf = loadImage("http://marianoferle.net76.net/processing/data/cf.png");
-  an = loadImage("http://marianoferle.net76.net/processing/data/an.png");
-  cat = loadImage("http://marianoferle.net76.net/processing/data/cat.png");
-  ch = loadImage("http://marianoferle.net76.net/processing/data/ch.png");
-  chb = loadImage("http://marianoferle.net76.net/processing/data/chb.png");
-  cor = loadImage("http://marianoferle.net76.net/processing/data/cor.png");
-  corr = loadImage("http://marianoferle.net76.net/processing/data/corr.png");
-  ent = loadImage("http://marianoferle.net76.net/processing/data/ent.png");
-  fm = loadImage("http://marianoferle.net76.net/processing/data/fm.png");
-  im = loadImage("http://marianoferle.net76.net/processing/data/im.png");
-  jj = loadImage("http://marianoferle.net76.net/processing/data/jj.png");
-  lar = loadImage("http://marianoferle.net76.net/processing/data/lar.png");
-  lp = loadImage("http://marianoferle.net76.net/processing/data/lp.png");
-  md = loadImage("http://marianoferle.net76.net/processing/data/md.png");
-  ms = loadImage("http://marianoferle.net76.net/processing/data/ms.png");
-  neq = loadImage("http://marianoferle.net76.net/processing/data/neq.png");
-  rn = loadImage("http://marianoferle.net76.net/processing/data/rn.png");
-  sane = loadImage("http://marianoferle.net76.net/processing/data/sane.png");
-  sf = loadImage("http://marianoferle.net76.net/processing/data/sf.png");
-  sj = loadImage("http://marianoferle.net76.net/processing/data/sj.png");
-  sl = loadImage("http://marianoferle.net76.net/processing/data/sl.png");
-  snc = loadImage("http://marianoferle.net76.net/processing/data/snc.png");
-  st = loadImage("http://marianoferle.net76.net/processing/data/st.png");
-  tf = loadImage("http://marianoferle.net76.net/processing/data/tf.png");
-  tuc = loadImage("http://marianoferle.net76.net/processing/data/tuc.png");
+  mapa = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/mapa_argentina.png");
+  ba = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ba.png");
+  cf = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/cf.png");
+  an = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/an.png");
+  cat = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/cat.png");
+  ch = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ch.png");
+  chb = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/chb.png");
+  cor = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/cor.png");
+  corr = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/corr.png");
+  ent = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ent.png");
+  fm = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/fm.png");
+  im = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/im.png");
+  jj = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/jj.png");
+  lar = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/lar.png");
+  lp = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/lp.png");
+  md = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/md.png");
+  ms = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/ms.png");
+  neq = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/neq.png");
+  rn = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/rn.png");
+  sane = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sane.png");
+  sf = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sf.png");
+  sj = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sj.png");
+  sl = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/sl.png");
+  snc = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/snc.png");
+  st = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/st.png");
+  tf = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/tf.png");
+  tuc = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/tuc.png");
   
-  compu = loadImage("http://marianoferle.net76.net/processing/data/compu.png");
-  hist = loadImage("http://marianoferle.net76.net/processing/data/hist.png");
+  compu = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/compu.png");
+  hist = loadImage("https://mf007.000webhostapp.com/sitios/censo/processing/data/hist.png");
   
-// coor = loadStrings("http://marianoferle.net76.net/query.php?tipo=load3");
- //coords = loadStrings("http://marianoferle.net76.net/query.php?tipo=load");
-// pobla = loadStrings("http://marianoferle.net76.net/query.php?tipo=load2");
+// coor = loadStrings("https://mf007.000webhostapp.com/sitios/censo/query.php?tipo=load3");
+ //coords = loadStrings("https://mf007.000webhostapp.com/sitios/censo/query.php?tipo=load");
+// pobla = loadStrings("https://mf007.000webhostapp.com/sitios/censo/query.php?tipo=load2");
 
 */
 
